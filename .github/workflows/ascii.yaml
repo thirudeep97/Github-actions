@@ -1,4 +1,4 @@
-name: ASCII-Workflow
+name: ascii_flow
 
 on: push 
 
