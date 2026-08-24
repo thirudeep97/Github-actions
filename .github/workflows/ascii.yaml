@@ -1,0 +1,25 @@
+name: Generate ASCII Workflow
+
+on: push 
+
+jobs:
+    ASCII Workflow:
+        runs_on: ubuntu-latest
+        steps:
+        - name: checkout repo
+          uses: actions/checkout@v7
+        
+        - name: Install cowsay lib
+          run: sudo apt-get install cowsay -y
+        
+        - name: Execute Cowsay CMD
+          run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWAR" >> dragon.txt
+
+        - name: Test File Exists
+          run: grep -i "dragon" dragon.txt
+
+        - name: Read file
+          run: cat dragon.txt
+
+        - name: List Repo Files
+          run: ls -ltra
