@@ -19,7 +19,7 @@ jobs:
           run: sleep 10
         - name: Test File Exists 
           run: grep -i "dragon" dragon.txt 
-    Build-Job:
+    Deploy-Job:
         runs-on: ubuntu-latest
         steps:
         - name: Read File
