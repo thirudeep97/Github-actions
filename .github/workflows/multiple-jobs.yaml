@@ -19,7 +19,6 @@ jobs:
           with:
             name: dragon-file-txt
             path: dragon.txt
-            archive: false
     Test-Job:
         needs: Build-Job
         runs-on: ubuntu-latest
