@@ -3,7 +3,7 @@ name: ascii_flow
 on: push 
 
 jobs:
-    ASCII Workflow:
+    ASCII-Workflow:
         runs-on: ubuntu-latest
         steps:
         - name: checkout repo
