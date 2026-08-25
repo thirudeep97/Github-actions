@@ -1,6 +1,6 @@
- name: docker-on-windows-ubuntu
+name: dockerwindows-ubuntu
 
- on:
+on:
   push:
   workflow_dispatch:
 
@@ -13,6 +13,7 @@ jobs:
         
         - name: Run Images
           run: docker run hello-world
+        
     Deploy-on-windows:
         runs-on: windows-latest
         steps:
