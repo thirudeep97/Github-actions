@@ -37,7 +37,7 @@
         runs-on: ubuntu-latest
         concurrency:
           group: tesing the concurrency
-          cancel-in-progress: true
+          cancel-in-progress: false
         steps:
         - name: Docker Run
           run: echo docker run -d -p 8080:80 $CONTAINER_REGISTRY/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
