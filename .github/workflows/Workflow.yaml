@@ -40,7 +40,8 @@
           cancel-in-progress: false
         steps:
         - name: Docker Run
-          run: echo docker run -d -p 8080:80 $CONTAINER_REGISTRY/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
-        - name: sleep command
-          run: sleep 600
+          timeout-minutes: 1
+          run: |
+            sleep 6000s
+            echo docker run -d -p 8080:80 $CONTAINER_REGISTRY/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
 
